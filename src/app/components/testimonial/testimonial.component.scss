@@ -1,0 +1,50 @@
+@import '../../scss/_vars';
+
+@import '../../scss/_mixins'; 
+
+section {
+    @include bg-img('../../assets/images/testimonial-bg.png');
+    @include padding(80px, 12px, null, 12px);
+
+    & > div {
+        @include media('flex-direction', null, ('max-lg': column));
+
+        & > div:first-child {   
+            margin-bottom: 40px;
+            max-width: 448px;
+
+            @include media('text-align', null, ('max-lg': center));
+            @include media('padding-left', null, ('max-md': 3px));
+            @include media('padding-right', null, ('max-md': 3px));
+
+            h1 {
+                @include margin(20px, null, 20px, null);
+            }
+
+            .review {
+                padding-top: 20px;
+                padding-left: 56px;
+                margin-top: 40px;
+
+                p {
+                    font-style: italic;
+                }
+
+                div {
+                    margin-top: 40px;
+
+                    p {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+
+        & > div:last-child {
+            max-width: 576px;
+            margin-left: 48px;
+            @include media('margin-left', 48px, ('max-lg': 0));
+            @include media('margin-top', null, ('max-lg': 20px));
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@import '../../scss/_vars';
+
+@import '../../scss/_mixins';
+
+section {
+    background-color: #fff;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 25px;
+    padding-right: 25px;
+   
+    & > div {
+        @include media('flex-direction', null, ('max-lg': column));
+
+        .service {
+            margin-bottom: 40px;
+            max-width: 576px;
+            @include media('text-align', null, ('max-lg': center));
+            @include media('padding-left', null, ('max-md': 12px));
+            @include media('padding-right', null, ('max-md': 12px));
+
+            h1 {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+
+            & > div {
+                @include media('flex-direction', null, ('max-lg': column));
+                margin-bottom: 20px;
+
+                div {
+                    margin-top: 20px;
+
+                    img {
+                        margin-bottom: 20px;
+                    }
+
+                    & > p:last-of-type {
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                    }
+
+                    & > a {
+                        text-transform: uppercase;
+                        margin-top: 32px;
+                        padding-top: 12px;
+                        padding-bottom: 12px;
+                        @include media('padding-left', 32px, ('max-md': 24px));
+                        @include media('padding-right', 32px, ('max-md': 24px));
+                        background-color: #E94D66;
+                        border-radius: 8px;
+                        border-bottom: 8px solid #E9558D;
+                    }
+
+                    &:last-child {
+                        @include media('margin-top', null, ('min-lg': 20px));
+                        @include media('margin-top', null, ('max-lg': 40px));
+                    }
+                }
+            }
+        }
+
+        .service-img {
+            margin-left: 48px;
+            max-width: 576px;
+            @include media('margin-left', null, ('max-lg': 0));
+        }
+    }
+
+}

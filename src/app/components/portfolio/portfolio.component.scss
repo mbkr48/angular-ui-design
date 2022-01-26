@@ -1,0 +1,61 @@
+@import '../../scss/_vars';
+
+@import '../../scss/_mixins';
+
+section {
+    background-color: #f1f1f1;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 18px;
+    padding-right: 18px;
+    
+    h1 {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    p {
+        br {
+            @include media('display', null, ('max-lg': none));
+        }
+    }
+
+    .filter {
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        a {
+            margin-top: 12px;
+            padding: 12px 24px 12px 24px;
+            padding-left: 24px;
+            padding-right: 24px;
+            border-radius: 9999px;
+            filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+
+            &:last-child {
+                background-color: #f42267;
+            }
+        }
+    }
+
+    .product {
+        img {
+            width: 384px;
+            height: 384px;
+            margin: 20px;
+        }
+    }
+
+    .readmore {
+            text-transform: uppercase;
+            margin-top: 64px;
+            margin-left: 12px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            @include media('padding-left', 32px, ('max-md': 24px));
+            @include media('padding-right', 32px, ('max-md': 24px));
+            background-color: #E94D66;
+            border-radius: 8px;
+            border-bottom: 8px solid #E9558D;
+    }
+}

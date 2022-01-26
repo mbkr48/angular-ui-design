@@ -1,0 +1,65 @@
+@import '../../scss/_vars';
+
+@import '../../scss/_mixins';
+
+footer {
+    section:first-child {
+        @include bg-img('../../assets/images/world-map-bg.png');
+        @include padding(80px, 18px, 80px, 18px);
+
+        & > div {
+            @include media('flex-direction', null, ('max-lg': column));
+        }
+
+        .quick-links {
+            @include media('align-items', null, ('min-xl': center));
+            @include media('width', null, ('min-lg': 50%));
+            @include media('text-align', null, ('max-sm': center));
+
+            & > div {
+                @include media('flex-direction', null, ('max-sm': column));
+                @include media('align-items', null, ('max-sm': center));
+
+                & > div {
+                    margin-bottom: 10px;
+
+                    p {
+                        color: #4b2d7f;
+                    }
+
+                    a {
+                        padding-top: 8px;
+                        @include media('padding-left', null, ('min-sm': 20px));
+                    }
+
+                    &:first-child {
+                        @include media('margin-right', null, ('min-sm': 80px));
+                    }
+                }
+            }
+            
+        }   
+
+        .images {
+            @include media('margin-top', null, ('max-lg': 20px));
+            @include media('width', null, ('min-lg': 50%));
+
+            & > div {
+                @include media('flex-direction', null, ('max-sm': column));
+
+                img {
+                    margin: 12px;
+                }
+            }
+        }
+    }  
+
+    section:last-child {
+        background-color: #f6f6f6;
+        @include padding(32px, 12px, 32px, 12px);
+
+        span, a {
+            margin-right: 20px;
+        }
+    }
+}

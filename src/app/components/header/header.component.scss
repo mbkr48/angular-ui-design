@@ -1,0 +1,106 @@
+@import '../../scss/_vars';
+
+@import '../../scss/_mixins';
+
+header {
+    @include bg-img('../../assets/images/header-bg.png'); 
+    @include padding(20px, 18px, null, 18px);
+
+    nav {
+        @include media('padding-left', null, ('min-sm': 40px));
+        @include media('padding-right', null, ('min-sm': 40px));
+
+        .logo {
+            // @include media('font-size', null, ('max-sm': 24px));
+            // @include media('line-height', null, ('max-sm': 32px));
+
+            img {
+                margin-right: 16px;
+                @include media('width', 55px, ('max-sm': 48px));
+            }
+        }
+
+        ul {
+            @include media('display', null, ('max-lg': 'none'));
+
+            a {
+                margin-left: 16px;
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+
+        .mobile-menu {
+            // @include media('font-size', null, ('max-sm': 16px));
+            // @include media('line-height', null, ('max-sm': 24px));
+            @include media('display', null, ('max-lg': 'flex'));
+
+            @include media('width', 128px, ('max-sm': 95px));
+            @include media('height', 44px, ('max-sm': 35px));
+
+            text-transform: uppercase;
+            border: 1px solid white;
+
+            img {
+                @include media('width', 20px, ('max-sm': 14px));
+                @include media('height', 20px, ('max-sm': 14px));
+                margin-left: 12px;
+            }
+        }
+    }
+
+    .hero {
+        @include padding(null, 16px, null, 16px);
+
+        section {
+            padding-top: 80px;
+            @include media('flex-direction', null, ('max-lg': column));
+
+            .hero-content {
+                margin-bottom: 40px;
+                max-width: 576px;
+                @include media('text-align', null, ('max-lg': center));
+
+                h1 {
+                    @include padding(20px, null, 20px, null);
+
+                    br {
+                        @include media('display', null, ('max-xl': none));
+                    }
+                }
+
+                div {
+                    margin-top: 20px;
+                    text-transform: uppercase;
+
+                    a {
+                        margin-top: 12px;
+                        @include media('padding', 12px 32px 12px 32px, ('max-md': 12px 24px 12px 24px));
+                        border-radius: 9999px;
+
+                        &:first-child {
+                            background-color: #f42267;
+                        }
+    
+                        &:last-child {
+                            margin-left: 12px;
+                            background-color: #773390;
+                        }
+                    }
+
+                }
+            }   
+
+            .hero-img {
+                max-width: 672px;
+            }
+        }
+    }
+}
+
+
+
+
+
