@@ -19,6 +19,24 @@
             </a>
         </ul>
 
+        <div class="search-section">
+            <input id="check-box" type="checkbox">
+
+            <form id="search-form" action="">
+                <input class="search-bar" placeholder="Search" type="text" required>
+                <button class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+
+            <label id="search-form-opener" for="check-box">
+                <i class="fas fa-search"></i>
+            </label>
+            <label id="search-form-closer" for="check-box">
+                <i class="fas fa-times"></i>
+            </label>
+        </div>
+
         <a routerLink='/main' class='mobile-menu sm:text-base text-2xl px-4 sm:w-24 sm:h-9 w-32 h-11 hidden lg:flex items-center justify-center border-2'>
             <span>MENU</span>
             <img src="../../../assets/images/hamburger.png" alt="Hamburger-Menu" class='ml-3 sm:w-3 sm:h-3 w-5 h-5'>

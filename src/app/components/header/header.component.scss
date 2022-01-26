@@ -11,9 +11,6 @@ header {
         @include media('padding-right', null, ('min-sm': 40px));
 
         .logo {
-            // @include media('font-size', null, ('max-sm': 24px));
-            // @include media('line-height', null, ('max-sm': 32px));
-
             img {
                 margin-right: 16px;
                 @include media('width', 55px, ('max-sm': 48px));
@@ -32,9 +29,87 @@ header {
             }
         }
 
+        .search-section {
+            position: relative;
+
+            #search-form {
+                display: flex;
+                position: absolute;
+                right: 100%;
+                z-index: 1;
+                color: black;
+                width: 370px;
+                height: 40px;
+                transform: scale(0, 0);
+                transform-origin: right center;
+                transition: all 0.4s linear;
+            }
+            
+            .search-bar {
+                width: 78%;
+                height: 100%;
+                padding: 10px;
+                font-size: 20px;
+            }
+            
+            .search-bar::placeholder {
+                font-size: 20px;
+                color: grey;
+            }
+            
+            .search-button {
+                width: 22%;
+                height: 100%;
+                cursor: pointer;
+                font-size: 20px;
+                color: white;
+                border: none;
+                background-color: #414141;
+            }
+            
+            #check-box {
+                display: none;
+            }
+            
+            #search-form-opener {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                font-size: 25px;
+                color: white;
+                width: 60px;
+                height: 40px;
+                margin: 0;
+            }
+            
+            #search-form-closer {
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                font-size: 25px;
+                color: white;
+                width: 60px;
+                height: 40px;
+                background-color: rgba(0, 0, 0, 0.3);
+                display: none;
+                margin: 0;
+            }
+            
+            #check-box:checked~#search-form {
+                transform: scale(1, 1);
+            }
+            
+            #check-box:checked~#search-form-closer {
+                display: flex;
+            }
+            
+            #check-box:checked~#search-form-opener {
+                display: none;
+            }
+        }
+
         .mobile-menu {
-            // @include media('font-size', null, ('max-sm': 16px));
-            // @include media('line-height', null, ('max-sm': 24px));
             @include media('display', null, ('max-lg': 'flex'));
 
             @include media('width', 128px, ('max-sm': 95px));
