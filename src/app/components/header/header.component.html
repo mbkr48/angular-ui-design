@@ -22,8 +22,8 @@
         <div class="search-section">
             <input id="check-box" type="checkbox">
 
-            <form id="search-form" action="">
-                <input class="search-bar" placeholder="Search" type="text" required>
+            <form id="search-form" (submit)="handleSearch($event, searchInput.value)">
+                <input #searchInput class="search-bar" placeholder="Search" type="text" required>
                 <button class="search-button">
                     <i class="fas fa-search"></i>
                 </button>

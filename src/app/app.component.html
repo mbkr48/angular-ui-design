@@ -1,4 +1,6 @@
-<app-header></app-header>
+<app-header (searchEvent)="handleSearch($event)"></app-header>
+
+<ng-container *ngComponentOutlet="currentComponent"></ng-container>
 
 <router-outlet></router-outlet>
 
